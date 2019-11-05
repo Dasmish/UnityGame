@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: b42e645e79e50fd4bbe300ab19b36a88
+guid: d8e7075b7941a67488e62177f47b8ddf
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -613615100091888363
-    second: KnightAttack_strip_0
+      213: -7163369904114767755
+    second: Dude_Monster_Attack1_4_0
   - first:
-      213: 7305235992584999090
-    second: KnightAttack_strip_1
+      213: 8031115725154491009
+    second: Dude_Monster_Attack1_4_1
   - first:
-      213: -4543613079373294775
-    second: KnightAttack_strip_2
+      213: 1781681019467425889
+    second: Dude_Monster_Attack1_4_2
   - first:
-      213: -8381283820916334025
-    second: KnightAttack_strip_3
+      213: -2014175544865569861
+    second: Dude_Monster_Attack1_4_3
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -98,13 +98,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: KnightAttack_strip_0
+      name: Dude_Monster_Attack1_4_0
       rect:
         serializedVersion: 2
-        x: 53
-        y: 17
-        width: 27
-        height: 36
+        x: 7
+        y: 0
+        width: 17
+        height: 26
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,20 +112,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3bebb0f1f40cecf478c7d8ada9b1d5b9
-      internalID: -613615100091888363
+      spriteID: e3f36f6ab0c11bc45a8c2ec04425de40
+      internalID: -7163369904114767755
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KnightAttack_strip_1
+      name: Dude_Monster_Attack1_4_1
       rect:
         serializedVersion: 2
-        x: 196
-        y: 13
-        width: 29
-        height: 40
+        x: 38
+        y: 0
+        width: 17
+        height: 24
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -133,20 +133,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b84add6ad72eba64eb213532d0fd3eea
-      internalID: 7305235992584999090
+      spriteID: 6438cab4e662f204d8afd9fb134777fa
+      internalID: 8031115725154491009
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KnightAttack_strip_2
+      name: Dude_Monster_Attack1_4_2
       rect:
         serializedVersion: 2
-        x: 340
-        y: 13
-        width: 29
-        height: 41
+        x: 70
+        y: 0
+        width: 26
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,20 +154,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d4dc106a154003443aae3374d6c861a8
-      internalID: -4543613079373294775
+      spriteID: 37fa26eca062e9c42a8174e3278ee84b
+      internalID: 1781681019467425889
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: KnightAttack_strip_3
+      name: Dude_Monster_Attack1_4_3
       rect:
         serializedVersion: 2
-        x: 484
-        y: 15
-        width: 28
-        height: 41
+        x: 103
+        y: 0
+        width: 19
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -175,8 +175,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef959381c17c92343aa37e6254ebf563
-      internalID: -8381283820916334025
+      spriteID: 628ee2afd2f6203499aace077f186bca
+      internalID: -2014175544865569861
       vertices: []
       indices: 
       edges: []

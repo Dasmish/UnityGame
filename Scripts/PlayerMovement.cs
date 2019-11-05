@@ -1,14 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Events;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
 
     private Rigidbody2D rb;
-    private Animator Animator;
+    public Animator Animator;
 
     public float Speed = 1f;
     float HorizontalMove = 0f;
+    float VerticalMove = 0f;
     public float JumpVelocity = 3f;
     public bool CanJump = true;
 
@@ -18,6 +20,7 @@ public class PlayerMovement : MonoBehaviour {
     public Transform GroundCheck;
     public float CheckRadius;
     public LayerMask WhatsGround;
+
 
     // Start is called before the first frame update
     void Start()
@@ -31,15 +34,23 @@ public class PlayerMovement : MonoBehaviour {
     {
         isGrounded = Physics2D.OverlapCircle(GroundCheck.position, CheckRadius, WhatsGround);
 
-        Animator.Play("PlayerRun");
-
         HorizontalMove = Input.GetAxisRaw("Horizontal");
+        VerticalMove = Input.GetAxisRaw("Vertical");
         rb.velocity = new Vector2(HorizontalMove * Speed, rb.velocity.y);
+        
 
-        if (FacingRight == false && HorizontalMove > 0)
+        if (HorizontalMove > 0  || HorizontalMove < 0)
+        {
+            Animator.SetFloat("Speed", Mathf.Abs(HorizontalMove));
+        } else
+        {
+            Animator.SetFloat("Speed", 0);
+        }
+
+        if (!FacingRight && HorizontalMove > 0)
         {
             FlipCharacter();
-        } else if (FacingRight == true && HorizontalMove < 0)
+        } else if (FacingRight && HorizontalMove < 0)
         {
             FlipCharacter();
         }
@@ -51,14 +62,18 @@ public class PlayerMovement : MonoBehaviour {
         if (isGrounded)
         {
             CanJump = true;
+            Animator.SetBool("isJumping", false);
         }
 
-        if (Input.GetKeyDown(KeyCode.UpArrow) && CanJump)
+        if (VerticalMove > 0 && CanJump)
         {
             CanJump = false;
+            Animator.SetBool("isJumping", true);
             rb.velocity = Vector2.up * JumpVelocity;
         }
+
     }
+
 
     void FlipCharacter()
     {

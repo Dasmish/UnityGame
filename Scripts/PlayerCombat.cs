@@ -14,7 +14,7 @@ public class PlayerCombat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("z"))
+        if (Input.GetKey("z"))
         {
             Animator.SetBool("isAttacking", true);
         }

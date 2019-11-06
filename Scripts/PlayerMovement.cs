@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.Events;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour {
 
@@ -74,13 +75,21 @@ public class PlayerMovement : MonoBehaviour {
 
     }
 
-
     void FlipCharacter()
     {
         FacingRight = !FacingRight;
         Vector3 Scale = transform.localScale;
         Scale.x *= -1;
         transform.localScale = Scale;
+    }
+
+    void OnCollisionEnter2D(Collision2D Collision)
+    {
+        if (Collision.gameObject.name == "Water")
+        {
+            //WorldController.RestartCoroutine();
+            SceneManager.LoadScene("GameScene");
+        }
     }
 
 }
